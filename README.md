@@ -1,6 +1,6 @@
 # Aggregation Trees
 
-![](docs/images/.README_images/at.png)
+![](docs/images/.README_images/921854f2.png)
 
 ## White paper
 
@@ -24,12 +24,32 @@ figure(3);
 tradeoff(obj);
 ```
 
+![](docs/images/.README_images/ad48ca8f.png)
+
 Aggregation Trees with Polar Graph (polar graph with clusters to facilitate visualization):
 
 ```MATLAB
 figure(1);
 AT(obj);
 ```
+
+![](docs/images/.README_images/921854f2.png)
+
+You can interpret the tree by looking at percentages and colors:
+* Percentages
+    * The percentages represent the amount of conflict between pairs of objectives. 
+* Colors
+    * **Red**der branches indicate the conflict is mostly between good values for these objectives. This is danger because these are the values we are worried about.
+    * **Blue**r branches indicate the conflict is mostly between bad values for these objectives. This is not as bad because these are not the values we care about.
+    * **Black**er branches indicate that either:
+        * There is no much conflit (look at the percentage) or...
+        * The conflict is everywhere.
+
+The respective Polar Graph is:
+
+![](docs/images/.README_images/92e29b82.png)
+
+The polar graph uses the aggregation tree to organize the order of objectives such that objectives with less conflict are placed together. 
 
 ## Syntax 
 
